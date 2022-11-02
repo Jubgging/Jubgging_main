@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/drawable/radius.xml" value="0.116" />
         <entry key="app/src/main/res/drawable/rectangle_5.xml" value="0.116" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2224371337890625" />
+        <entry key="app/src/main/res/layout/activity_main_page.xml" value="0.21240942028985507" />
+        <entry key="app/src/main/res/layout/main_page.xml" value="0.21240942028985507" />
       </map>
     </option>
   </component>
