@@ -10,3 +10,4 @@
 
 ### 11월 3일 목요일 
 + Figma to android studio for 메인 페이지 
++ 메인페이지 background 변경 및 플로깅 하단 이미지 버튼 구현
