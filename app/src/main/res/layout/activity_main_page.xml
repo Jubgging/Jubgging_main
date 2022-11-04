@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#FAFAFA"
+    >
 
 
     <!-- 중간에 줍깅 글자-->
@@ -92,6 +95,36 @@
         android:text="오늘의 플로깅 목표"
         android:textColor="#000000"
         android:textSize="17dp" />
+
+
+    <!--플로깅 이미지 버튼-->
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="660dp"
+        android:layout_marginLeft="110dp"
+        android:id="@+id/btn_floging_img"
+        android:src="@drawable/floging"
+        >
+
+    </ImageButton>
+
+    <!--플로깅 이미지 text-->
+
+    <TextView
+        android:id="@+id/text_floging_img"
+        android:layout_width="63dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="88dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="700dp"
+        android:text="@string/text_floging_img"
+        android:textAppearance="@style/text_floging_img"
+        android:gravity="center_horizontal|top"
+        />
+
 
 
 </RelativeLayout>
