@@ -41,7 +41,9 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
         android:background="#FFFFFF"
-        android:elevation="4dp" />
+        android:elevation="4dp"
+        />
+
     <!--플로깅 버튼-->
     <Button
         android:id="@+id/btn_floging"
@@ -123,6 +125,38 @@
         android:text="@string/text_floging_img"
         android:textAppearance="@style/text_floging_img"
         android:gravity="center_horizontal|top"
+        />
+
+    <!-- 기록 이미지 버튼-->
+    
+    <ImageButton
+        android:id="@+id/btn_time_img"
+        android:src="@drawable/time"
+        android:layout_width="63dp"
+        android:layout_height="42dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="241dp"
+        android:layout_marginTop="660dp"
+
+        >
+
+    </ImageButton>
+
+    <!--기록 이미지 text-->
+
+    <TextView
+        android:id="@+id/text_time_img"
+        android:layout_width="63dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="240dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="700dp"
+        android:text="@string/text_time_img"
+        android:textAppearance="@style/text_time_img"
+        android:gravity="center_horizontal|top"
+        android:alpha="0.5"
         />
 
 

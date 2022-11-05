@@ -39,7 +39,7 @@
         android:layout_height="48dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="88dp"
-        android:background="@drawable/radius"
+        android:background="@drawable/radius_start"
         android:text="시작하기"
         android:textAppearance="@style/start_id"
 
