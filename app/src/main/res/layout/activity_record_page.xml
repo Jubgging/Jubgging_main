@@ -1,9 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".record_page">
+    tools:context=".record_page"
+    android:orientation="horizontal"
+    android:background="#FAFAFA"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 상단 줍깅이 버튼  -->
+
+    <Button
+        android:id="@+id/btn_profile"
+        android:layout_width="92dp"
+        android:layout_height="38dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="38dp"
+        android:background="@drawable/radius_profile"
+        android:text="줍깅이"
+        android:textAppearance="@style/btn_profile" />
+
+    <!-- 상단 통계 버튼  -->
+
+    <ImageButton
+        android:id="@+id/btn_statis"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/statis"
+
+        >
+
+    </ImageButton>
+
+
+    <!-- 상단 설정 버튼  -->
+    <ImageButton
+
+        android:id="@+id/btn_settings"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/set">
+
+    </ImageButton>
+
+
+
+    <!-- 달력  -->
+    <LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            />
+
+        <Button
+            android:id="@+id/btn_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="일정추가를 원하시면 다른 날을 선택하세요!"
+            android:gravity="center"
+            android:textSize="15dp"
+            />
+
+    </LinearLayout>
+
+    <!-- 달력 구분선  -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#1A000000"
+        android:layout_marginTop="490dp"
+        >
+    </View>
+
+
+</RelativeLayout>

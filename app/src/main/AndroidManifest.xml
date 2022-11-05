@@ -9,12 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyJubggingProject">
+
+        <activity
+            android:name=".record_page"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".main_page"
-            android:parentActivityName=".MainActivity"
-            android:exported="false" />
-
-        <!--메인 화면-->
+            android:exported="false"
+            android:parentActivityName=".MainActivity" /> <!-- 메인 화면 -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -22,6 +28,7 @@
             <!-- 어플이 실행될 때 가장 먼저 실행하도록 하는 코드 -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
