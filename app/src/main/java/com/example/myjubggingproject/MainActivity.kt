@@ -3,7 +3,10 @@ package com.example.myjubggingproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import com.example.myjubggingproject.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.concurrent.timer
 
 class MainActivity : AppCompatActivity() {
 
@@ -14,9 +17,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root) //그릴 xml 뷰 파일을 연결 시켜준다.
 
-        // 기록 버튼을 누르면 화면 전환
-        binding.btnTimeImg.setOnClickListener {
-            startActivity(Intent(this@MainActivity, RecordPageActivity::class.java))
+        //Fragment 구현
+
+        btn_time_img.setOnClickListener {
+            supportFragmentManager.beginTransaction().replace(R.id.main_frame, MainFrag()).commit()
         }
+
     }
 }

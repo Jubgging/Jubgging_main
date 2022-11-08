@@ -9,6 +9,32 @@
     android:background="#FAFAFA"
     >
 
+    <!-- Fragment를 위한 Framge -->
+    <FrameLayout
+        android:id="@+id/main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/btn_time_img"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginLeft="279dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="110dp"
+            android:background="#F9F9F9"
+            android:src="@drawable/time">
+
+        </ImageButton>
+    </FrameLayout>
+
+    <!-- 밑에 상단바를 걍 만들었음 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+    </LinearLayout>
 
     <!-- 중간에 줍깅 글자-->
     <TextView
@@ -30,7 +56,7 @@
     <!--날씨 상단바-->
     <View
         android:id="@+id/weather_bar"
-        android:layout_width="380dp"
+        android:layout_width="wrap_content"
         android:layout_height="80dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -47,8 +73,8 @@
     <!--플로깅 버튼-->
     <Button
         android:id="@+id/btn_floging"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="526dp"
@@ -60,16 +86,15 @@
 
     <View
         android:id="@+id/main_bar"
-        android:layout_width="359dp"
+        android:layout_width="wrap_content"
         android:layout_height="142dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
         android:layout_marginTop="505dp"
-        android:layout_marginEnd="17dp"
         android:background="@drawable/main_bar" />
 
     <TextView
@@ -101,14 +126,16 @@
 
     <!--플로깅 이미지 버튼-->
     <ImageButton
-        android:layout_width="20dp"
-        android:layout_height="32dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="660dp"
-        android:layout_marginLeft="110dp"
         android:id="@+id/btn_floging_img"
-        android:src="@drawable/floging"
-        >
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_bar"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="110dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:background="#F9F9F9"
+        android:src="@drawable/floging">
 
     </ImageButton>
 
@@ -127,21 +154,8 @@
         android:gravity="center_horizontal|top"
         />
 
+
     <!-- 기록 이미지 버튼-->
-    
-    <ImageButton
-        android:id="@+id/btn_time_img"
-        android:src="@drawable/time"
-        android:layout_width="63dp"
-        android:layout_height="42dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="241dp"
-        android:layout_marginTop="660dp"
-
-        >
-
-    </ImageButton>
 
     <!--기록 이미지 text-->
 

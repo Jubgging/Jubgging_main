@@ -13,7 +13,7 @@ Line height: 62sp
         </item>
 
         <item name="android:fontFamily">
-            @font/yeon_sung
+            Roboto
         </item>
 
         <item name="height">
@@ -34,7 +34,7 @@ Line height: 62sp
         </item>
 
         <item name="android:fontFamily">
-            @font/yeon_sung
+            Roboto
         </item>
 
         <item name="height">

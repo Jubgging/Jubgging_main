@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+    <!-- 상단 통계 버튼  -->
+
+    <ImageButton
+        android:id="@+id/btn_statis_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="40dp"
+        android:background="#F9F9F9"
+        android:contentDescription="@string/todo"
+
+        android:src="@drawable/statis"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck">
+
+    </ImageButton>
+
+    <!-- 상단 설정 버튼  -->
+    <ImageButton
+
+        android:id="@+id/btn_settings_r"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="40dp"
+        android:background="#F9F9F9"
+        android:contentDescription="@string/todo2"
+        android:src="@drawable/set"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck">
+
+    </ImageButton>
+
+
+</FrameLayout>
