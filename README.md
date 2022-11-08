@@ -19,3 +19,7 @@
 
 ### 11월 6일 일요일
 + 아이콘 배경 없애기
+
+### 11월 9일 수요일
++ main_page -> record_page Fragment 화면 전환 구현
++ record_page Fragment 화면 디테일 수정 & 추가 필요
