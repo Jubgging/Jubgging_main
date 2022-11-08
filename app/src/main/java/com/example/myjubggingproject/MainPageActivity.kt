@@ -3,10 +3,9 @@ package com.example.myjubggingproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.myjubggingproject.databinding.ActivityMainBinding
 import com.example.myjubggingproject.databinding.ActivityMainPageBinding
 
-class main_page : AppCompatActivity() {
+class MainPageActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityMainPageBinding
 
@@ -17,7 +16,7 @@ class main_page : AppCompatActivity() {
 
         // 기록 버튼을 누르면 화면 전환
         binding.btnTimeImg.setOnClickListener {
-            startActivity(Intent(this@main_page, record_page::class.java))
+            startActivity(Intent(this@MainPageActivity, RecordPageActivity::class.java))
         }
     }
 }

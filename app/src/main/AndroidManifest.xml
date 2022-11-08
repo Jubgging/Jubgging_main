@@ -11,14 +11,14 @@
         android:theme="@style/Theme.MyJubggingProject">
 
         <activity
-            android:name=".record_page"
+            android:name=".RecordPageActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".main_page"
+            android:name=".MainPageActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" /> <!-- 메인 화면 -->
         <activity

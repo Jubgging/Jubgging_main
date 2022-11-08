@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         // 시작하기 버튼 누르면 화면 전환
         binding.startId.setOnClickListener {
-            startActivity(Intent(this@MainActivity, main_page::class.java))
+            startActivity(Intent(this@MainActivity, MainPageActivity::class.java))
         }
 
 
