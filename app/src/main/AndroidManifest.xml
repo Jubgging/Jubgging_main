@@ -18,11 +18,11 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainPageActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" /> <!-- 메인 화면 -->
-        <activity
             android:name=".MainActivity"
+            android:exported="false"
+            android:parentActivityName=".SplashActivity" /> <!-- 메인 화면 -->
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
 
             <!-- 어플이 실행될 때 가장 먼저 실행하도록 하는 코드 -->
