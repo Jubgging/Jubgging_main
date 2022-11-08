@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myjubggingproject.databinding.ActivityRecordPageBinding
 
 
-class record_page : AppCompatActivity() {
+class RecordPageActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityRecordPageBinding
 
