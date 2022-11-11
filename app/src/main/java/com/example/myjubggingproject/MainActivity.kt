@@ -1,11 +1,9 @@
 package com.example.myjubggingproject
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import com.example.myjubggingproject.databinding.ActivityMainBinding
 import com.google.gson.annotations.SerializedName
 import retrofit2.Call
 import retrofit2.Callback
@@ -14,7 +12,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
-
+import com.example.myjubggingproject.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,10 +33,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root) //그릴 xml 뷰 파일을 연결 시켜준다.
 
-        // 기록 버튼을 누르면 화면 전환
+        //Fragment 구현
+
         binding.btnTimeImg.setOnClickListener {
-            startActivity(Intent(this@MainActivity, RecordPageActivity::class.java))
+            supportFragmentManager.beginTransaction().run {
+                replace(binding.mainFragment.id, RecordFragment())
+                commit()
+            }
         }
+
+
+
+
+
+
+
+        // 날씨 구현
 
         //Create Retrofit Builder
         val retrofit = Retrofit.Builder()
