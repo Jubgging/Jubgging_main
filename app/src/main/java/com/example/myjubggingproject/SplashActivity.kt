@@ -4,14 +4,19 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.myjubggingproject.databinding.ActivitySplashBinding
 
 //메인 화면
 class SplashActivity : AppCompatActivity() {
 
+    lateinit var binding: ActivitySplashBinding
+
     //뷰가 생성되었을 때
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash) //그릴 xml 뷰 파일을 연결 시켜준다.
+        setContentView(R.layout.activity_splash)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+        setContentView(binding.root) //그릴 xml 뷰 파일을 연결 시켜준다.
 
         // 스플래시 화면 2초 뒤에 MainPage 화면으로 전환
 
