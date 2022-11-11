@@ -32,6 +32,7 @@
         android:layout_height="48dp"
         android:layout_marginLeft="250dp"
         android:layout_marginTop="40dp"
+        android:background="#00FFFFFF"
         android:src="@drawable/statis"
 
         >
@@ -46,6 +47,7 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginLeft="320dp"
+        android:background="#00FFFFFF"
         android:layout_marginTop="40dp"
         android:src="@drawable/set">
 

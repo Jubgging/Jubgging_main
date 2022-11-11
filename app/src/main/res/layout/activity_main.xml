@@ -24,27 +24,120 @@
         android:layout_marginBottom="505dp"
         android:text="Jubgging"
         android:textColor="#000000"
-        android:textSize="35dp"
+        android:background="#FAFAFA"
+        android:textSize="30dp"
         android:textStyle="bold" />
 
+
     <!--날씨 상단바-->
-    <View
-        android:id="@+id/weather_bar"
-        android:layout_width="380dp"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="20dp"
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="200dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:background="#FFFFFF"
-        android:elevation="4dp"
-        />
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:background="#FAFAFA"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_marginRight="2dp"
+            android:gravity="right|center_vertical"
+            android:text="name"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/tv_country"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:layout_marginLeft="2dp"
+            android:gravity="left|center_vertical"
+            android:text="contry"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_name" >
+
+        <ImageView
+            android:id="@+id/iv_weather"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="30"
+            android:src="@drawable/weather"
+            android:background="#FAFAFA" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="70"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:weightSum="100"
+            app:layout_constraintLeft_toRightOf="@+id/iv_weather"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <TextView
+                android:id="@+id/tv_temp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:text="00 'C"
+                android:textColor="#006AFF"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_main"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="35"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:text="Clear Sky"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:text="broken clouds"
+                android:textColor="#9E9E9E"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
 
     <!--플로깅 버튼-->
+
     <Button
         android:id="@+id/btn_floging"
         android:layout_width="100dp"
@@ -107,6 +200,7 @@
         android:layout_marginTop="660dp"
         android:layout_marginLeft="110dp"
         android:id="@+id/btn_floging_img"
+        android:background="#00FFFFFF"
         android:src="@drawable/floging"
         >
 
@@ -136,6 +230,7 @@
         android:layout_height="42dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:background="#00FFFFFF"
         android:layout_marginLeft="241dp"
         android:layout_marginTop="660dp"
 
