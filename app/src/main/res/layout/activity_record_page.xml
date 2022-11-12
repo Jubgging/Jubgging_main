@@ -1,94 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecordPageActivity"
-    android:orientation="horizontal"
+    tools:context=".SplashActivity"
+    android:orientation="vertical"
     android:background="#FAFAFA"
     >
 
-    <!-- 상단 줍깅이 버튼  -->
+    <!-- 달력 버튼-->
+    <ImageView
+        android:id="@+id/btn_calender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="148dp"
+        android:background="#00000000"
+        android:src="@drawable/calender_icon" />
 
+    <!--통계 버튼-->
+    <ImageView
+        android:id="@+id/btn_statis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="78dp"
+        android:background="#00000000"
+        android:src="@drawable/statis" />
+
+    <!--설정 버튼-->
+    <ImageView
+        android:id="@+id/btn_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="20dp"
+        android:background="#00000000"
+        android:src="@drawable/set" />
+
+    <!--왼쪽 상단 줍깅이 버튼-->
     <Button
         android:id="@+id/btn_profile"
-        android:layout_width="92dp"
-        android:layout_height="38dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="45dp"
         android:background="@drawable/radius_profile"
         android:text="줍깅이"
         android:textAppearance="@style/btn_profile" />
 
-    <!-- 상단 통계 버튼  -->
-
-    <ImageButton
-        android:id="@+id/btn_statis"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="40dp"
-        android:background="#00FFFFFF"
-        android:src="@drawable/statis"
-
-        >
-
-    </ImageButton>
-
-
-    <!-- 상단 설정 버튼  -->
-    <ImageButton
-
-        android:id="@+id/btn_settings"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginLeft="320dp"
-        android:background="#00FFFFFF"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/set">
-
-    </ImageButton>
-
-
-
-    <!-- 달력  -->
-
-    <!-- 달력 구분선  -->
-    <LinearLayout
+    <!--플로깅 이미지 버튼-->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical"
-        android:padding="30dp">
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
 
-        <CalendarView
-            android:id="@+id/calendar"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/text_floging_img"
+            android:layout_width="63dp"
+            android:layout_height="15dp"
+            android:gravity="center_horizontal|top"
+            android:text="@string/text_floging_img"
+            android:textAppearance="@style/text_floging_img"
+            app:layout_constraintEnd_toStartOf="@+id/text_time_img"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="44dp" />
+
+        <ImageButton
+            android:id="@+id/btn_floging_img"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp" />
+            android:background="#00FFFFFF"
+            android:src="@drawable/floging"
+            app:layout_constraintEnd_toStartOf="@+id/btn_time_img"
+            app:layout_constraintHorizontal_bias="0.285"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
 
-        <Button
-            android:id="@+id/btn_date"
-            android:layout_width="match_parent"
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/text_time_img"
+            android:layout_width="63dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.5"
+            android:gravity="center_horizontal|top"
+            android:text="@string/text_time_img"
+            android:textAppearance="@style/text_time_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.689"
+            app:layout_constraintStart_toEndOf="@+id/btn_floging_img"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="42dp" />
+
+        <ImageButton
+            android:id="@+id/btn_time_img"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="일정추가를 원하시면 다른 날을 선택하세요!"
-            android:textSize="15dp" />
+            android:background="#00FFFFFF"
+            android:src="@drawable/time"
+            app:layout_constraintBottom_toTopOf="@+id/text_time_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.735"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
 
-    </LinearLayout>
+        </ImageButton>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1px"
-        android:background="#1A000000"
-        android:layout_marginTop="490dp"
-        >
-    </View>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </RelativeLayout>

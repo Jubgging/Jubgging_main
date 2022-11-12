@@ -1,5 +1,4 @@
 package com.example.myjubggingproject
-
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -23,10 +22,7 @@ class MainActivity : AppCompatActivity() {
         var lon = "126.785823"
     }
 
-
-
     lateinit var binding: ActivityMainBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,13 +37,6 @@ class MainActivity : AppCompatActivity() {
                 commit()
             }
         }
-
-
-
-
-
-
-
         // 날씨 구현
 
         //Create Retrofit Builder
@@ -95,20 +84,12 @@ class MainActivity : AppCompatActivity() {
                         .fallback(R.drawable.weather)
                         .into(binding.ivWeather)
 
-
-
-
-
-
-
-
                 }
             }
 
         })
     }
 }
-
 interface WeatherService{
 
     @GET("data/2.5/weather")
@@ -143,7 +124,6 @@ class Sys {
 
     @SerializedName("name") // 도시이름
     var name: String? = null
-
 
 }
 
