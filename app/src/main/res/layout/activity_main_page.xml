@@ -1,9 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main_page">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#FAFAFA"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 중간에 줍깅 글자-->
+    <TextView
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="505dp"
+        android:text="Jubgging"
+        android:textColor="#000000"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <!--날씨 상단바-->
+    <View
+        android:id="@+id/weather_bar"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp" />
+    <!--플로깅 버튼-->
+    <Button
+        android:id="@+id/btn_floging"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="526dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/circle"
+        android:text="플로깅"
+        android:textColor="#FFFCFC"
+        android:textSize="25dp" />
+
+    <View
+        android:id="@+id/main_bar"
+        android:layout_width="359dp"
+        android:layout_height="142dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="505dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/main_bar" />
+
+    <TextView
+        android:id="@+id/txt_id"
+        android:layout_width="94dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="538dp"
+        android:gravity="center_horizontal|top"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:text="줍깅이" />
+
+    <TextView
+        android:id="@+id/txt_plan"
+        android:layout_width="190dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="591dp"
+        android:gravity="center_horizontal|top"
+        android:text="오늘의 플로깅 목표"
+        android:textColor="#000000"
+        android:textSize="17dp" />
+
+
+    <!--플로깅 이미지 버튼-->
+    <ImageButton
+        android:id="@+id/btn_floging_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="660dp"
+        android:background="#00ffffff"
+        android:src="@drawable/floging" />
+
+
+    <!--플로깅 이미지 text-->
+    <TextView
+        android:id="@+id/text_floging_img"
+        android:layout_width="63dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="88dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="700dp"
+        android:text="@string/text_floging_img"
+        android:textAppearance="@style/text_floging_img"
+        android:gravity="center_horizontal|top"
+        />
+
+    <!--time 이미지 버튼-->
+    <ImageButton
+        android:id="@+id/btn_timer_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="250dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="658dp"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="33dp"
+        android:background="#00ffffff"
+        android:src="@drawable/timer" />
+
+    <!--time 이미지 text-->
+    <TextView
+        android:id="@+id/txt_timer_img"
+        android:layout_width="63dp"
+        android:layout_height="15dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="240dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="700dp"
+        android:text="시간"
+        android:textAppearance="@style/text_floging_img"
+        android:gravity="center_horizontal|top"
+        />
+
+
+
+</RelativeLayout>
