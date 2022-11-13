@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
                 commit()
             }
         }
+        // 날씨 구현
 
         //Create Retrofit Builder
         val retrofit = Retrofit.Builder()

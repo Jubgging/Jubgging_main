@@ -11,6 +11,7 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Date
 
+
 class RecordPageActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityRecordPageBinding
@@ -18,6 +19,7 @@ class RecordPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRecordPageBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         /*Calendar 일정 추가 클릭 이벤트

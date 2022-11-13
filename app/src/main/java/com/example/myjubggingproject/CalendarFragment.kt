@@ -37,8 +37,8 @@ class RecordFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val rootView = inflater.inflate(R.layout.fragment_calendar, container, false)
-        return rootView
+        binding = FragmentCalendarBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     companion object {
