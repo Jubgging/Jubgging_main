@@ -31,6 +31,7 @@
 ### 11월 13일 일요일
 + 전체 작업/파일 흐름 정리
 + google map API 구현 (미완)
++ today is 구현(RecordActivity 화면 오늘은 yyyy-mm-dd입니다)
 + recordActivity xml 작업
 + MainActivity -> RecordActivity 전환(Intent)
 
