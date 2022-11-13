@@ -1,4 +1,5 @@
 package com.example.myjubggingproject
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 import com.example.myjubggingproject.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,15 +31,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root) //그릴 xml 뷰 파일을 연결 시켜준다.
 
-        //Fragment 구현
+        // intent main -> record
+        btn_floging.setOnClickListener {
+            val intent = Intent(this, RecordPageActivity::class.java)
+            startActivity(intent)
+        }
 
+        // fragment 기록
         binding.btnTimeImg.setOnClickListener {
             supportFragmentManager.beginTransaction().run {
                 replace(binding.mainFragment.id, RecordFragment())
                 commit()
             }
         }
-        // 날씨 구현
 
         //Create Retrofit Builder
         val retrofit = Retrofit.Builder()
@@ -86,7 +92,6 @@ class MainActivity : AppCompatActivity() {
 
                 }
             }
-
         })
     }
 }

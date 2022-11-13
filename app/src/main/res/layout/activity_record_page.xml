@@ -9,7 +9,33 @@
     android:background="#FAFAFA"
     >
 
+
+    <TextView
+        android:id="@+id/txt_todayis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="125dp"
+        android:text="Today is"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
     <!-- 달력 버튼-->
+
+    <TextView
+        android:id="@+id/txt_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="170dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <ImageView
         android:id="@+id/btn_calender"
         android:layout_width="wrap_content"
@@ -58,77 +84,51 @@
         android:text="줍깅이"
         android:textAppearance="@style/btn_profile" />
 
-    <!--플로깅 이미지 버튼-->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ImageView
+        android:id="@+id/rectangles"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="451dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="-1dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteY="556dp">
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="0dp"
+        android:layout_weight="30"
+        android:src="@drawable/rectangle" />
 
-        <TextView
-            android:id="@+id/text_floging_img"
-            android:layout_width="63dp"
-            android:layout_height="15dp"
-            android:gravity="center_horizontal|top"
-            android:text="@string/text_floging_img"
-            android:textAppearance="@style/text_floging_img"
-            app:layout_constraintEnd_toStartOf="@+id/text_time_img"
-            app:layout_constraintHorizontal_bias="0.25"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="44dp" />
+    <ImageView
+        android:id="@+id/whiterectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="121dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="348dp"
+        android:layout_marginEnd="26dp"
+        android:layout_weight="30"
+        android:src="@drawable/whiterectangle" />
 
-        <ImageButton
-            android:id="@+id/btn_floging_img"
-            android:layout_width="31dp"
-            android:layout_height="29dp"
-            android:background="#00FFFFFF"
-            android:src="@drawable/floging"
-            app:layout_constraintEnd_toStartOf="@+id/btn_time_img"
-            app:layout_constraintHorizontal_bias="0.285"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_today"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="30"
+        android:src="@drawable/line" />
 
-        </ImageButton>
-
-        <TextView
-            android:id="@+id/text_time_img"
-            android:layout_width="63dp"
-            android:layout_height="15dp"
-            android:layout_marginEnd="16dp"
-            android:alpha="0.5"
-            android:gravity="center_horizontal|top"
-            android:text="@string/text_time_img"
-            android:textAppearance="@style/text_time_img"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.689"
-            app:layout_constraintStart_toEndOf="@+id/btn_floging_img"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteY="42dp" />
-
-        <ImageButton
-            android:id="@+id/btn_time_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00FFFFFF"
-            android:src="@drawable/time"
-            app:layout_constraintBottom_toTopOf="@+id/text_time_img"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.735"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:ignore="MissingConstraints">
-
-        </ImageButton>
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </RelativeLayout>
