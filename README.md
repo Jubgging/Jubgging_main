@@ -27,3 +27,10 @@
 ### 11월 11일 금요일
 + weather 브랜치에서 weather 구현 후 push완료(weather브랜치에 푸쉬함), 추후 fragment 구현후 merge예정
 + fragment record페이지 아주 약가 구현완료(겹침 문제 해결해야함)
+
+### 11월 12일-13일 토-일요일
++ google map API 구현 (미완)
++ recordActivity xml 작업
++ MainActivity -> RecordActivity 전환(Intent)
+
+
