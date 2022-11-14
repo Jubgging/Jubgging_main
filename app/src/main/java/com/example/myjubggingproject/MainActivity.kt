@@ -1,5 +1,5 @@
 package com.example.myjubggingproject
-
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 import com.example.myjubggingproject.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,31 +24,26 @@ class MainActivity : AppCompatActivity() {
         var lon = "126.785823"
     }
 
-
-
     lateinit var binding: ActivityMainBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root) //그릴 xml 뷰 파일을 연결 시켜준다.
 
-        //Fragment 구현
-
-        binding.btnTimeImg.setOnClickListener {
+        // intent main -> flogging
+        btn_floging.setOnClickListener {
             supportFragmentManager.beginTransaction().run {
-                replace(binding.mainFragment.id, CalendarFragment())
+                replace(binding.mainFragment.id, FloggingFragment())
                 commit()
             }
         }
 
-
-
-
-
-
-
+        // 기록 이미지 -> recordActivity
+        binding.btnTimeImg.setOnClickListener {
+            val intent = Intent(this, RecordPageActivity::class.java)
+            startActivity(intent)
+        }
         // 날씨 구현
 
         //Create Retrofit Builder
@@ -95,20 +91,11 @@ class MainActivity : AppCompatActivity() {
                         .fallback(R.drawable.weather)
                         .into(binding.ivWeather)
 
-
-
-
-
-
-
-
                 }
             }
-
         })
     }
 }
-
 interface WeatherService{
 
     @GET("data/2.5/weather")
@@ -143,7 +130,6 @@ class Sys {
 
     @SerializedName("name") // 도시이름
     var name: String? = null
-
 
 }
 
