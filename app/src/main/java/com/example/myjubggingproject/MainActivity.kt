@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnTimeImg.setOnClickListener {
             supportFragmentManager.beginTransaction().run {
-                replace(binding.mainFragment.id, RecordFragment())
+                replace(binding.mainFragment.id, CalendarFragment())
                 commit()
             }
         }

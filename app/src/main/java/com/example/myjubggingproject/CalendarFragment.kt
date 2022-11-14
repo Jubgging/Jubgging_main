@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CalendarView
 import com.example.myjubggingproject.databinding.FragmentCalendarBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -17,7 +18,7 @@ private const val ARG_PARAM2 = "param2"
  * Use the [RecordFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class RecordFragment : Fragment() {
+class CalendarFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -28,18 +29,27 @@ class RecordFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
     }
 
     lateinit var binding : FragmentCalendarBinding
 
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
+
+
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentCalendarBinding.inflate(inflater, container, false)
         return binding.root
+
+
     }
+
+
 
     companion object {
         /**
@@ -53,7 +63,7 @@ class RecordFragment : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            RecordFragment().apply {
+            CalendarFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
