@@ -33,6 +33,11 @@
 + google map API 구현 (미완)
 + RecordActivity 화면 날짜 구현(오늘은 yyyy-mm-dd입니다)
 + RecordActivity xml 작업
+
+### 11월 16일 수요일
++ weather 밤에서 구현할수있게 수정 완료
++ weatehr 브랜치에서 push and merge 함
++ navigation 브랜치 생성 후 네이게이션 구현할 예정
 + MainActivity -> RecordActivity 전환(Intent)
 
 
