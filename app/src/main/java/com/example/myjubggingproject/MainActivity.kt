@@ -67,10 +67,19 @@ class MainActivity : AppCompatActivity() {
                     val weatherResponse = response.body()
                     Log.d("MainActivity", "result: " + weatherResponse.toString())
 
-                    binding.tvName.text = weatherResponse!!.sys!!.name
-                    binding.tvCountry.text = weatherResponse!!.sys!!.country
-                    binding.tvMain.text = weatherResponse!!.weather!!.get(0).main
-                    binding.tvDescription.text = weatherResponse!!.weather!!.get(0).description
+                    val name = weatherResponse!!.sys!!.name
+                    var icon = weatherResponse!!.weather!!.get(0).icon
+                    binding.tvName.text = name
+
+                    val country = weatherResponse!!.sys!!.country
+                    binding.tvCountry.text = country
+
+                    var mainWeather = weatherResponse!!.weather!!.get(0).main
+                    binding.tvMain.text = mainWeather
+
+
+                    var subWeather = weatherResponse!!.weather!!.get(0).description
+                    binding.tvDescription.text = subWeather
 
                     var temp = weatherResponse!!.main!!.temp - 273.15
                     binding.tvTemp.text = String.format("%.1f °C", temp)
@@ -80,7 +89,7 @@ class MainActivity : AppCompatActivity() {
                         .load(
                             resources.getDrawable(
                                 resources.getIdentifier(
-                                    "icon_" + weatherResponse!!.weather!!.get(0).icon,
+                                    "icon_" + icon,
                                     "drawable",
                                     packageName
                                 )
