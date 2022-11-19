@@ -2,6 +2,7 @@ package com.example.myjubggingproject
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.google.gson.annotations.SerializedName
@@ -13,6 +14,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Query
 import com.example.myjubggingproject.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,27 +28,34 @@ class MainActivity : AppCompatActivity() {
         var lon = "126.785823"
     }
 
+    private lateinit var auth: FirebaseAuth
     lateinit var binding: ActivityMainBinding
-
+   
+/*----------------------파이어베이스---------------------------------------------------------*/
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root) //그릴 xml 뷰 파일을 연결 시켜준다.
 
-        // intent main -> flogging
-        btn_floging.setOnClickListener {
-            supportFragmentManager.beginTransaction().run {
-                replace(binding.mainFragment.id, FloggingFragment())
-                commit()
-            }
-        }
+        auth = Firebase.auth
+        auth.createUserWithEmailAndPassword("2020126109", "abcd")
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) { //로그인 성공
 
-        // 기록 이미지 -> recordActivity
-        binding.btnTimeImg.setOnClickListener {
-            val intent = Intent(this, RecordPageActivity::class.java)
-            startActivity(intent)
-        }
-        // 날씨 구현
+                 Toast.makeText(this, "로그인 성공", Toast.LENGTH_SHORT).show()
+                } else {
+
+
+                    Toast.makeText(this, "로그인 실패", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+ /*---------------------------------MainActivity -> FloggingFragment------------------------------*/
+  
+/*-------------------------기록 이미지 -> recordActivity -> 다시 Fragment ^^ !------------------------*/
+        
+/*-------------------------------------날씨 구현-----------------------------------------------------*/
 
         //Create Retrofit Builder
         val retrofit = Retrofit.Builder()

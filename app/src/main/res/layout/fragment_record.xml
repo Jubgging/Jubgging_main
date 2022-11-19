@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity"
-    android:orientation="vertical"
-    android:background="#FAFAFA"
-    >
-
+    tools:context=".RecordFragment">
 
     <TextView
         android:id="@+id/txt_todayis"
@@ -24,7 +19,7 @@
     <!-- 달력 버튼-->
 
     <TextView
-        android:id="@+id/txt_today"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -37,7 +32,7 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/btn_calender"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -66,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="46dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="20dp"
         android:background="#00000000"
         android:src="@drawable/set" />
@@ -115,10 +110,8 @@
         android:src="@drawable/whiterectangle" />
 
     <ImageView
-        android:id="@+id/line"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_today"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
