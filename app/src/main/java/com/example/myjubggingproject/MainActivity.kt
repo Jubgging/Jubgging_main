@@ -15,6 +15,7 @@ import retrofit2.http.Query
 import com.example.myjubggingproject.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
 
     companion object{
