@@ -19,6 +19,7 @@ import retrofit2.http.Query
 
 
 
+
 class MainActivity : AppCompatActivity() {
 
     companion object{
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root) //그릴 xml 뷰 파일을 연결 시켜준다.
 
+
         // intent main -> flogging
         binding.btnFloging.setOnClickListener {
             val intent = Intent(this, MapsActivity::class.java)
@@ -43,15 +45,19 @@ class MainActivity : AppCompatActivity() {
 
 
         // 기록 이미지 -> recordActivity
-        binding.btnTimeImg.setOnClickListener {
+        /*binding.btnTimeImg.setOnClickListener {
             val intent = Intent(this, RecordPageActivity::class.java)
             startActivity(intent)
+<<<<<<< HEAD
         }
 
 
 
 
 
+=======
+        }*/
+>>>>>>> 0d8573417263c25f7cf06089db1df86a219b0095
         // 날씨 구현
 
         //Create Retrofit Builder
@@ -75,19 +81,10 @@ class MainActivity : AppCompatActivity() {
                     val weatherResponse = response.body()
                     Log.d("MainActivity", "result: " + weatherResponse.toString())
 
-                    val name = weatherResponse!!.sys!!.name
-                    var icon = weatherResponse!!.weather!!.get(0).icon
-                    binding.tvName.text = name
-
-                    val country = weatherResponse!!.sys!!.country
-                    binding.tvCountry.text = country
-
-                    var mainWeather = weatherResponse!!.weather!!.get(0).main
-                    binding.tvMain.text = mainWeather
-
-
-                    var subWeather = weatherResponse!!.weather!!.get(0).description
-                    binding.tvDescription.text = subWeather
+                    binding.tvName.text = weatherResponse!!.sys!!.name
+                    binding.tvCountry.text = weatherResponse!!.sys!!.country
+                    binding.tvMain.text = weatherResponse!!.weather!!.get(0).main
+                    binding.tvDescription.text = weatherResponse!!.weather!!.get(0).description
 
                     var temp = weatherResponse!!.main!!.temp - 273.15
                     binding.tvTemp.text = String.format("%.1f °C", temp)
@@ -97,7 +94,7 @@ class MainActivity : AppCompatActivity() {
                         .load(
                             resources.getDrawable(
                                 resources.getIdentifier(
-                                    "icon_" + icon,
+                                    "icon_" + weatherResponse!!.weather!!.get(0).icon,
                                     "drawable",
                                     packageName
                                 )
@@ -149,7 +146,6 @@ class Sys {
     var name: String? = null
 
 }
-
 
 
 
