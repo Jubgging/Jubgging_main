@@ -44,20 +44,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // 기록 이미지 -> recordActivity
-        /*binding.btnTimeImg.setOnClickListener {
-            val intent = Intent(this, RecordPageActivity::class.java)
-            startActivity(intent)
-<<<<<<< HEAD
+        // 기록 이미지 -> recordFragment
+        binding.btnTimeImg.setOnClickListener {
+            supportFragmentManager.beginTransaction().run {
+                replace(binding.mainFragment.id, RecordFragment())
+                commit()
+            }
         }
-
-
-
-
-
-=======
-        }*/
->>>>>>> 0d8573417263c25f7cf06089db1df86a219b0095
         // 날씨 구현
 
         //Create Retrofit Builder

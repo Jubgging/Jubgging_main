@@ -19,7 +19,6 @@
         android:theme="@style/Theme.MyJubggingProject"
         android:usesCleartextTraffic="true">
 
-<<<<<<< HEAD
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -33,7 +32,6 @@
         -->
 =======
         <!-- 구글맵 API key-->
->>>>>>> 0d8573417263c25f7cf06089db1df86a219b0095
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC95TTyS2EZKFhFpDjlv5CiL0DBFIhBOP8" />
