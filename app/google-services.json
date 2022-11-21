@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "356395819963",
+    "project_id": "jubgging-368505",
+    "storage_bucket": "jubgging-368505.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356395819963:android:268a7c68662bc035ff9a9e",
+        "android_client_info": {
+          "package_name": "com.example.myjubggingproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356395819963-dha6c69vj07ggvfkmkv0k0e1duv648n8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAP6p5NI1d7IxpRy7brpvLsOf-XyJuFC3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356395819963-dha6c69vj07ggvfkmkv0k0e1duv648n8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
